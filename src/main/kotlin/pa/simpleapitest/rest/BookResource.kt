@@ -7,7 +7,7 @@ import pa.simpleapitest.biz.BookRepository
 
 @RestController
 @RequestMapping("/api/books")
-class BookController(private val bookRepository: BookRepository) {
+class BookResource(private val bookRepository: BookRepository) {
 
     @GetMapping
     fun getAllBooks(): List<Book> = bookRepository.findAll()
